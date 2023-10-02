@@ -1,0 +1,113 @@
+{
+	"layer": "top",
+	"position": "top",
+	"modules-left": [
+		"hyprland/workspaces",
+		"mpris",
+		"hyprland/window"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"cpu",
+		"memory",
+		"temperature",
+		"pulseaudio",
+		"hyprland/language",
+		"network",
+		"tray"
+	],
+	"margin-top": 10,
+	"margin-bottom": -15,
+	"margin-right": 13,
+	"margin-left": 13,
+	"hyprland/workspaces": {
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+		"on-click": "activate",
+		"all-outputs": true,
+		"persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": [],
+			"7": [],
+			"8": [],
+			"9": [],
+			"10": []
+		},
+		"format": "{name}"
+	},
+	"clock": {
+		"format": "{:%H:%M - %d/%m/%y}",
+		"on-click-right": "kalendar"
+	},
+	"tray": {
+		"icon-size": 21,
+		"spacing": 5
+	},
+	"cpu": {
+		"interval": "10",
+		"on-click": "kitty -e btop",
+		"format": "CPU: {usage}%"
+	},
+	"temperature": {
+		"interval": 4,
+		"format": "Temp: {temperatureC}°C",
+		"on-click": "kitty -e btop"
+	},
+	"network": {
+		"format-wifi": "{essid}",
+		"format-linked": "{ifname}: (No IP)",
+		"format-disconnected": "NULL",
+		"family": "ipv4"
+	},
+	"pulseaudio": {
+		"scroll-step": 2,
+		"on-click": "pavucontrol",
+		"on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+		"format": "Vol: {volume}% {icon}"
+	},
+	"mpris": {
+		"max-length": 80,
+		"escape": true,
+		"format": "{artist} - {title}"
+	},
+	"memory": {
+		"interval": 30,
+		"format": "Mem: {percentage}%",
+		"on-click": "kitty -e btop"
+	},
+	"hyprland/language": {
+		"format": "{}",
+		"format-en-workman": "Workman",
+		"format-en-": "EN-US",
+		"format-en_workman": "Workman",
+		"format-en_": "EN-US",
+		"on-click": "hyprctl switchxkblayout goudan-tech.-sk-104-keyboard next",
+		"on-click-right": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+	},
+	"hyprland/window": {
+		"max-length": 150,
+		"separate-outputs": true
+	},
+	"custom/left-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-light": {
+		"format": "",
+		"tooltip": false
+	}
+}

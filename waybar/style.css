@@ -1,0 +1,55 @@
+@define-color bg #002c39;
+@define-color text #1ecfc5;
+
+* {
+  border: none;
+  border-radius: 10px;
+  min-height: 0;
+  margin: 0.2em;
+}
+
+#waybar {
+  background: rgba(0, 0, 0, 0);
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+}
+
+#clock,
+#cpu,
+#network,
+#pulseaudio,
+#temperature,
+#mpris,
+#memory,
+#language,
+#submap,
+#calendar,
+#tray,
+#window {
+  background: @bg;
+  color: @text;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  font-size: 15px;
+}
+
+#workspaces {
+  background: @bg;
+  color: @text;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  font-size: 16px;
+}
+
+#workspaces button {
+  padding: 0px 5px;
+  background-color: @bg;
+  color: @text;
+}
+
+#workspaces button.active {
+  background-color: rgba(0, 100, 128, 255);
+  color: @text;
+  border: none;
+  border-radius: 30%;
+}
