@@ -1,5 +1,5 @@
 @define-color bg #002c39;
-@define-color text #1ecfc5;
+@define-color text #0ecdcc;
 
 * {
   border: none;
@@ -10,7 +10,7 @@
 
 #waybar {
   background: rgba(0, 0, 0, 0);
-  font-family: "JetBrains Mono";
+  font-family: "JetBrains Mono", "Symbols Nerd Font Mono";
   font-weight: bold;
 }
 
@@ -21,10 +21,9 @@
 #temperature,
 #mpris,
 #memory,
-#language,
-#submap,
 #calendar,
 #tray,
+#custom-tumbleweed,
 #window {
   background: @bg;
   color: @text;

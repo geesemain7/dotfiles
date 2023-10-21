@@ -2,26 +2,29 @@
 	"layer": "top",
 	"position": "top",
 	"modules-left": [
+		"custom/tumbleweed",
 		"hyprland/workspaces",
-		"mpris",
-		"hyprland/window"
+		"tray",
+		"mpris"
 	],
 	"modules-center": [
-		"clock"
+		"hyprland/window"
 	],
 	"modules-right": [
 		"cpu",
 		"memory",
 		"temperature",
 		"pulseaudio",
-		"hyprland/language",
+		"keyboard-state",
 		"network",
-		"tray"
+		"clock#date",
+		"clock#time"
 	],
-	"margin-top": 10,
+	"margin-top": 5,
 	"margin-bottom": -15,
 	"margin-right": 13,
 	"margin-left": 13,
+
 	"hyprland/workspaces": {
 		"on-scroll-up": "hyprctl dispatch workspace e+1",
 		"on-scroll-down": "hyprctl dispatch workspace e-1",
@@ -41,45 +44,68 @@
 		},
 		"format": "{name}"
 	},
-	"clock": {
-		"format": "{:%H:%M - %d/%m/%y}",
-		"on-click-right": "kalendar"
+	"clock#time": {
+		"format": "{: %H:%M}"
+	},
+	"clock#date": {
+		"format": "{:󰸘 %d/%m/%y}"
 	},
 	"tray": {
 		"icon-size": 21,
-		"spacing": 5
+		"spacing": 5,
+		"icons": {
+			"vlc": "",
+			"steam": ""
+		}
 	},
 	"cpu": {
-		"interval": "10",
-		"on-click": "kitty -e btop",
-		"format": "CPU: {usage}%"
+		"format": "󰍛 {usage}%",
+		"on-click": "kitty -e htop"
 	},
 	"temperature": {
 		"interval": 4,
-		"format": "Temp: {temperatureC}°C",
-		"on-click": "kitty -e btop"
+		"format": "{icon} {temperatureC}°C",
+		"format-icons": ["", "", ""],
+		"on-click": "kitty -e htop"
 	},
 	"network": {
-		"format-wifi": "{essid}",
+		"format-wifi": "󰖩 {essid}",
 		"format-linked": "{ifname}: (No IP)",
-		"format-disconnected": "NULL",
-		"family": "ipv4"
+		"format-disconnected": "󰖪",
+		"family": "ipv4",
+		"on-click": "kitty -e nmtui"
 	},
 	"pulseaudio": {
 		"scroll-step": 2,
-		"on-click": "pavucontrol",
-		"on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-		"format": "Vol: {volume}% {icon}"
+		"format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "",
+        //"format-source": "{volume}% ",
+        //"format-source-muted": "",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["󱟛"]
+        },
+        "on-click": "pavucontrol"
 	},
 	"mpris": {
 		"max-length": 80,
 		"escape": true,
-		"format": "{artist} - {title}"
+		"format": "󰎅 {title}  {artist}"
+		//"format-icons": {
+		//	"playing": "󰎅",
+		//	"paused": "󰎄"
+		//}
 	},
 	"memory": {
-		"interval": 30,
-		"format": "Mem: {percentage}%",
-		"on-click": "kitty -e btop"
+		"format": " {}%",
+		"on-click": "kitty -e htop"
 	},
 	"hyprland/language": {
 		"format": "{}",
@@ -94,20 +120,17 @@
 		"max-length": 150,
 		"separate-outputs": true
 	},
-	"custom/left-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/left-arrow-light": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-dark": {
-		"format": "",
-		"tooltip": false
-	},
-	"custom/right-arrow-light": {
-		"format": "",
-		"tooltip": false
-	}
+	"keyboard-state": {
+		"numlock": true,
+		"capslock": true,
+		"format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+	"custom/tumbleweed": {
+		"format": "{icon}",
+		"format-icons": [""]
+	} 
 }
