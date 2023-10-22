@@ -97,7 +97,7 @@
 	"mpris": {
 		"max-length": 80,
 		"escape": true,
-		"format": "󰎅 {title}  {artist}"
+		"format": "󰎅 {title} -  {artist}"
 		//"format-icons": {
 		//	"playing": "󰎅",
 		//	"paused": "󰎄"
