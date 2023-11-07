@@ -26,23 +26,21 @@
 	"margin-left": 13,
 
 	"hyprland/workspaces": {
-		"on-scroll-up": "hyprctl dispatch workspace e+1",
-		"on-scroll-down": "hyprctl dispatch workspace e-1",
 		"on-click": "activate",
 		"all-outputs": true,
 		"persistent_workspaces": {
 			"1": [],
 			"2": [],
 			"3": [],
-			"4": [],
-			"5": [],
-			"6": [],
-			"7": [],
-			"8": [],
-			"9": [],
-			"10": []
+			"4": []
 		},
-		"format": "{name}"
+		"format": "{icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": ""
+		}
 	},
 	"clock#time": {
 		"format": "{: %H:%M}"
@@ -129,8 +127,8 @@
             "unlocked": ""
         }
     },
-	"custom/tumbleweed": {
-		"format": "{icon}",
-		"format-icons": [""]
-	} 
+	//"custom/tumbleweed": {
+	//	"format": "{icon}",
+	//	"format-icons": [""]
+	//} 
 }
