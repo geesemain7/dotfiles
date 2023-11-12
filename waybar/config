@@ -29,17 +29,14 @@
 		"on-click": "activate",
 		"all-outputs": true,
 		"persistent_workspaces": {
-			"1": [],
-			"2": [],
-			"3": [],
-			"4": []
-		},
+			"1": []
+    },
 		"format": "{icon}",
 		"format-icons": {
-			"1": "",
+			"1": "",
 			"2": "",
-			"3": "",
-			"4": ""
+			"3": "",
+			"4": ""
 		}
 	},
 	"clock#time": {
