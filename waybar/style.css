@@ -47,7 +47,7 @@
 }
 
 #workspaces button.active {
-  background-color: rgba(0, 100, 128, 255);
+  background-color: rgba(0, 100, 128, 0.85);
   color: @text;
   border: none;
   border-radius: 30%;
