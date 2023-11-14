@@ -1,7 +1,17 @@
-Dotfiles and stuff for this rice:
+Dotfiles and stuff for this my rice.
 
-![rice](https://github.com/geesemain7/dotfiles/assets/128736368/764858cc-123d-4476-a59a-5639ce80183f)
+![non_doxxing_rice](https://github.com/geesemain7/dotfiles/assets/128736368/21934165-7fc6-45e5-bad7-25ab61279193)
 
-Nothing special, just a simple Hyprland configuration with some edges to smooth out.<br>
+![rofi](https://github.com/geesemain7/dotfiles/assets/128736368/6b24e356-a7d3-4b1d-b216-72fa97c95976)
+
+![nvim](https://github.com/geesemain7/dotfiles/assets/128736368/ec0ca04c-568d-418b-b1c5-fc09ebb47c5b)
+
+WM: Hyprland<br>
+Status bar: Waybar<br>
+Terminal emulator: Kitty<br>
+App launcher: Rofi<br>
+Text editor: Neovim (set up with lazyvim)<br><br>
+
 I wanted to put it here so I can move it to another computer to make setup smooth with git.<br><br>
+
 ...or you can just clone the repo and use it for yourself, that's fine too.
