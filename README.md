@@ -4,4 +4,4 @@ Dotfiles and stuff for this rice:
 
 Nothing special, just a simple Hyprland configuration with some edges to smooth out.<br>
 I wanted to put it here so I can move it to another computer to make setup smooth with git.<br><br>
-...or you can just copy the files and use them for yourself, that's fine too.
+...or you can just clone the repo and use it for yourself, that's fine too.
