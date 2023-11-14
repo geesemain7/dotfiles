@@ -13,7 +13,7 @@ App launcher: Rofi<br>
 Text editor: Neovim (set up with lazyvim)<br>
 
 Font: JetBrains Mono Nerd<br>
-Icons: Papirus Dark
+Icons: Papirus Dark<br>
 Theme: Adawita Dark (if it ain't broke, don't fix it)
 
 I wanted to put it here so I can move it to another computer to make setup smooth with git. Just to make life easier.<br>
