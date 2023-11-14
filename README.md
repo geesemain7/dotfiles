@@ -10,8 +10,8 @@ WM: Hyprland<br>
 Status bar: Waybar<br>
 Terminal emulator: Kitty<br>
 App launcher: Rofi<br>
-Text editor: Neovim (set up with lazyvim)<br><br>
+Text editor: Neovim (set up with lazyvim)<br>
 
-I wanted to put it here so I can move it to another computer to make setup smooth with git.<br><br>
+I wanted to put it here so I can move it to another computer to make setup smooth with git.<br>
 
 ...or you can just clone the repo and use it for yourself, that's fine too.
