@@ -12,7 +12,7 @@ Terminal emulator: Kitty<br>
 App launcher: Rofi<br>
 Text editor: Neovim (set up with lazyvim)<br>
 
-Font: JetBrains Mono Nerd
+Font: JetBrains Mono Nerd<br>
 Icons: Papirus Dark
 
 I wanted to put it here so I can move it to another computer to make setup smooth with git. Just to make life easier.<br>
