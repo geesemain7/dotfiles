@@ -1,5 +1,5 @@
 * {
-    font: "JetBrainsMonoNL Nerd Font Propo 20";
+    font: "JetBrainsMonoNL NFP 20";
     g-spacing: 10px;
     g-margin: 0;
     b-color: #000000FF;
