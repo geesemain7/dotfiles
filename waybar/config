@@ -60,7 +60,7 @@
 	"temperature": {
 		"interval": 4,
 		"format": "{icon} {temperatureC}°C",
-		"format-icons": ["", "", ""],
+		"format-icons": [""],
 		"on-click": "kitty -e htop"
 	},
 	"network": {
