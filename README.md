@@ -1,10 +1,10 @@
 Dotfiles and stuff for this my rice.
 
-![pfetch](https://github.com/geesemain7/dotfiles/assets/128736368/d0ca84e6-9ad1-461e-ab83-8644eb5bbfcb)
+![pfetch](https://github.com/geesemain7/dotfiles/assets/128736368/c9737a3e-d939-4824-8ea6-560b2dc24b0d)
 
-![rofi](https://github.com/geesemain7/dotfiles/assets/128736368/6b24e356-a7d3-4b1d-b216-72fa97c95976)
+![rofi](https://github.com/geesemain7/dotfiles/assets/128736368/16ab1b05-5978-4a3c-9d9a-7eacd92529ec)
 
-![nvim](https://github.com/geesemain7/dotfiles/assets/128736368/ec0ca04c-568d-418b-b1c5-fc09ebb47c5b)
+![neovim](https://github.com/geesemain7/dotfiles/assets/128736368/45c58001-2586-4cef-b4db-dbb84ee127f2)
 
 WM: Hyprland<br>
 Status bar: Waybar<br>
