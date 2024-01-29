@@ -21,7 +21,7 @@ $time\
 # don't mind this mess, please
 
 [directory]
-style = "fg:#00afff bg:#005faf"
+style = "fg:#00ffff bg:#005faf"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
