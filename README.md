@@ -1,6 +1,6 @@
 Dotfiles and stuff for this my rice.
 
-![20240115_18h01m29s_grim](https://github.com/geesemain7/dotfiles/assets/128736368/bcd856c2-3fda-4f90-802d-b1f08ac36abd)
+![pfetch](https://github.com/geesemain7/dotfiles/assets/128736368/d0ca84e6-9ad1-461e-ab83-8644eb5bbfcb)
 
 ![rofi](https://github.com/geesemain7/dotfiles/assets/128736368/6b24e356-a7d3-4b1d-b216-72fa97c95976)
 
@@ -8,7 +8,7 @@ Dotfiles and stuff for this my rice.
 
 WM: Hyprland<br>
 Status bar: Waybar<br>
-Shell: zsh (prompt customized with powerlevel10k)
+Shell: zsh (prompt customized with starship)<br>
 Terminal emulator: Kitty<br>
 App launcher: Rofi<br>
 Text editor: Neovim (set up with lazyvim)<br>
