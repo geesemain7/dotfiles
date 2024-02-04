@@ -1,6 +1,6 @@
 Dotfiles and stuff for this my rice.
 
-![pfetch](https://github.com/geesemain7/dotfiles/assets/128736368/c9737a3e-d939-4824-8ea6-560b2dc24b0d)
+![pfetch](https://github.com/geesemain7/dotfiles/assets/128736368/f5e96e27-b861-4d13-a596-c7f58aa8047e)
 
 ![rofi](https://github.com/geesemain7/dotfiles/assets/128736368/16ab1b05-5978-4a3c-9d9a-7eacd92529ec)
 
