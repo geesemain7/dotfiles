@@ -1,0 +1,131 @@
+{
+	"layer": "top",
+	"position": "top",
+	"modules-left": [
+		"custom/tumbleweed",
+		"hyprland/workspaces",
+		"tray",
+		"mpris"
+	],
+	"modules-center": [
+		"hyprland/window"
+	],
+	"modules-right": [
+		"cpu",
+		"memory",
+		"pulseaudio",
+    "clock#date",
+    "clock#time",
+	],
+	"margin-top": 5,
+	"margin-bottom": -15,
+	"margin-right": 13,
+	"margin-left": 13,
+
+	"hyprland/workspaces": {
+		"on-click": "activate",
+		"all-outputs": true,
+		"persistent_workspaces": {
+			"1": []
+    },
+		"format": "{icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"10": "󰛨"
+		}
+	},
+	"clock#time": {
+		"interval": 60,
+    "format": " {:%H:%M}"
+	},
+	"clock#date": {
+		"interval": 60,
+    "format": "󰸘 {:%d/%m/%y}"
+	},
+	"tray": {
+		"icon-size": 21,
+		"spacing": 5,
+		"icons": {
+			"vlc": "",
+			"steam": ""
+		}
+	},
+	"cpu": {
+		"format": " {usage}%",
+		"on-click": "kitty -e htop"
+	},
+	"temperature": {
+		"interval": 4,
+		"format": "{icon} {temperatureC}°C",
+		"format-icons": [""],
+		"on-click": "kitty -e htop"
+	},
+	"network": {
+		"format-wifi": "󰖩 {essid}",
+		"format-linked": "{ifname}: (No IP)",
+		"format-disconnected": "󰖪",
+		"family": "ipv4",
+		"on-click": "kitty -e nmtui"
+	},
+	"pulseaudio": {
+		"scroll-step": 2,
+		"format": "{icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "",
+        //"format-source": "{volume}% ",
+        //"format-source-muted": "",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["󰓃"]
+        },
+        "on-click": "pavucontrol"
+	},
+	"mpris": {
+		"max-length": 80,
+		"escape": true,
+		"format": "󰎅 {title} -  {artist}"
+		//"format-icons": {
+		//	"playing": "󰎅",
+		//	"paused": "󰎄"
+		//}
+	},
+	"memory": {
+		"format": " {}%",
+		"on-click": "kitty -e htop"
+	},
+	"hyprland/language": {
+		"format": "{}",
+		"format-en-workman": "Workman",
+		"format-en-": "EN-US",
+		"format-en_workman": "Workman",
+		"format-en_": "EN-US",
+		"on-click": "hyprctl switchxkblayout goudan-tech.-sk-104-keyboard next",
+		"on-click-right": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+	},
+	"hyprland/window": {
+		"max-length": 100,
+		"separate-outputs": true
+	},
+	"keyboard-state": {
+		"numlock": true,
+		"capslock": true,
+		"format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+	//"custom/tumbleweed": {
+	//	"format": "{icon}",
+	//	"format-icons": [""]
+	//} 
+}
