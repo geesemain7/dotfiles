@@ -1,6 +1,6 @@
 Dotfiles and stuff for this my rice.
 
-![pfetch](https://github.com/user-attachments/assets/69cb4301-70de-40e2-9393-adca2784bae9)
+![pfetch](https://github.com/user-attachments/assets/c45ca5e5-5748-42f6-887d-7d95aba0e7bd)
 
 ![wofi](https://github.com/user-attachments/assets/695e339a-a30e-4636-9607-35e03855f690)
 
