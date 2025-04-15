@@ -5,10 +5,10 @@ rule = {
     },
   },
   apply_properties = {
-      ["node.description"]       = "Schiit Modi+ Pro",
-      ["audio.format"]           = "S24LE",
-      ["audio.rate"]             = 192000,
-      ["audio.channels"]         = 2
+      ["node.description"] = "Schiit Modi+ Pro",
+      ["audio.format"]     = "S24LE",
+      ["audio.rate"]       = 192000,
+      ["audio.channels"]   = 2
   },
 }
 table.insert(alsa_monitor.rules,rule)
