@@ -1,0 +1,186 @@
+format = """
+[░▒▓](os_bg)\
+
+$os\
+[](fg:os_bg bg:shell_bg)\
+
+$shell\
+[](fg:shell_bg bg:directory_bg)\
+
+$directory\
+[](fg:directory_bg bg:lang_bg)\
+
+$c\
+$haskell\
+$java\
+$kotlin\
+$lua\
+$nodejs\
+$php\
+$python\
+$rust\
+$swift\
+[](fg:lang_bg bg:git_bg)\
+
+$git_branch\
+$git_status\
+[](fg:git_bg)\
+
+\n$character"""
+
+palette = 'custom'
+
+
+# OS module
+
+[os]
+style = "bg:os_bg fg:os_text"
+format = "[ $symbol ]($style)"
+disabled = false
+
+[os.symbols]
+Android = ""
+Arch = ""
+Artix = ""
+CentOS = ""
+Debian = ""
+EndeavourOS = ""
+Fedora = ""
+FreeBSD = ""
+Garuda = ""
+Gentoo = ""
+Kali = ""
+Linux = "󰌽"
+Macos = ""
+Manjaro = ""
+Mint = ""
+NixOS = ""
+openSUSE = ""
+Pop = ""
+Raspbian = ""
+Redhat = ""
+RedHatEnterprise = ""
+RockyLinux = ""
+Ubuntu = ""
+Solus = ""
+Void = ""
+Windows = ""
+
+
+# shell module
+
+[shell]
+style = "bg:shell_bg fg:text_default"
+format = "[ $indicator ]($style)"
+disabled = false
+
+bash_indicator = ''
+cmd_indicator = ''
+fish_indicator = '󰈺'
+powershell_indicator = '󰨊'
+zsh_indicator = 'zsh'
+
+
+# directory module
+
+[directory]
+style = "bg:directory_bg fg:text_default"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"~" = "󱂵"
+".config" = ""
+"Documents" = "󱧶"
+"Downloads" = "󰉍"
+"Music" = "󱍙"
+"Pictures" = "󰉏"
+"Videos" = "󱧺"
+
+
+# git modules
+
+[git_branch]
+symbol = ""
+style = "bg:git_bg fg:text_default"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:git_bg fg:text_default"
+format = '[$all_status$ahead_behind ]($style)'
+
+
+# language modules
+
+[c]
+symbol = ""
+style = "bg:lang_bg fg:text_default"
+format = '[ $symbol $name $version ]($style)'
+commands = [ [ 'clang', '--version' ], [ 'gcc', '--version' ], [ 'cc', '--version' ] ]
+
+# c++ doesn't work for whatever reason... your guess is as good as mine
+
+[golang]
+symbol = "󰟓"
+style = "bg:lang_bg fg:text_default"
+format = '[ $symbol $version ]($style)'
+
+[haskell]
+symbol = ""
+style = "bg:lang_bg fg:text_default"
+format = '[ $symbol $version ]($style)'
+
+[java]
+symbol = ""
+style = "bg:lang_bg fg:text_default"
+format = '[ $symbol $version ]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:lang_bg fg:text_default"
+format = '[ $symbol $version ]($style)'
+
+[lua]
+symbol = ""
+style = "bg:lang_bg fg:text_default"
+format = '[ $symbol $version ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:lang_bg fg:text_default"
+format = '[ $symbol $version ]($style)'
+
+[php]
+symbol = ""
+style = "bg:lang_bg fg:text_default"
+format = '[ $symbol $version ]($style)'
+
+[python]
+symbol = ""
+style = "bg:lang_bg fg:text_default"
+format = '[ $symbol $version ]($style)'
+python_binary = "python3"
+
+[rust]
+symbol = ""
+style = "bg:lang_bg fg:text_default"
+format = '[ $symbol $version ]($style)'
+
+[swift]
+symbol = ""
+style = "bg:lang_bg fg:text_default"
+format = '[ $symbol $version ]($style)'
+
+
+# palette
+
+[palettes.custom]
+text_default = '#00d4ff'
+os_text = '#00ffff'
+
+os_bg = '#0087af'
+shell_bg = '#005faf'
+directory_bg = '#394260'
+lang_bg = '#212736'
+git_bg = '#1d2230'
