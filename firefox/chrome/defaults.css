@@ -18,7 +18,7 @@
   --tf-display-urlbar-icons: flex; /* If the icons inside the url bar should be shown, none = hidden, flex = shown */
   --tf-display-sidebar-tools: flex; /* If the "Customize sidebar" button on the sidebar should be shown, none = hidden, flex = shown */ 
   --tf-display-titles: flex; /* If titles (tabs, navbar, main etc.) should be shown, none = hidden, flex = shown */
-  --tf-newtab-logo: "       ____  	 ______            ____  \A  ∧_∧ __\\   \\  	/ ____(_)_______  / __/___  _  __  \A/      \\   \\  / /_  / / ___/ _ \\/ /_/ __ \\| |/ /  \A\\   `---´   / / __/ / / /  /  __/  _/ /_/ /⟩   ⟨  \A  \\_________/ /_/   /_/_/   \\___//_/ \\____//_/|_|  \A";
+  --tf-newtab-logo: "       ____  	 ______            ____  \A  ∧_∧ __\\   \\  	/ ____(_)_______  / __/___  _  __  \A/      \\   \\  / /_  / / ___/ _ \\/ /_/ __ \\| |/ /  \A\\   `---´   / / __/ / / /  /  __/  _/ /_/ /⟩   ⟨  \A  \\_________/ /_/   /_/_/   \\___/__/ \\____//_/|_|  \A";
   --tf-navbar-margin: 8px 8px 2px; /* navbar margin */
   --tf-navbar-padding: 4px; /* navbar padding */
   
