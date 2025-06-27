@@ -1,0 +1,6 @@
+mode=drun
+no_actions=true
+order=alphabetical
+allow_images=true
+width=35%
+height=35%
