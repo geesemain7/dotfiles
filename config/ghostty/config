@@ -5,7 +5,7 @@ bold-is-bright = true
 # colors
 theme = Cobalt2
 foreground = 00d4ff
-background = 00262a
+background = 001D20
 
 # cursor settings
 cursor-color = 00ffff
@@ -17,7 +17,7 @@ window-theme = ghostty
 window-padding-x = 2
 window-padding-y = 3
 window-titlebar-foreground = 00d4ff
-window-titlebar-background = 1a1b26
+window-titlebar-background = 001014
 window-title-font-family = JetBrains Mono
 
 # blur (pls work on gnome soon i beg you)
