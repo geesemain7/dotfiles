@@ -1,0 +1,94 @@
+{
+  "logo": {
+    "type": "small",
+    "padding": {
+      "top": 1,
+      "left": 3,
+      "right": 4
+    }
+  },
+  
+  "display": {
+    "separator": " ❯ ",
+    "color": {
+      "keys": "green",
+      "separator": "red",
+      "constant": "green"
+    }
+  },
+  
+  "modules": [
+    {
+      "type":   "title",
+      "format": "{#green}╭────────────────── {#red}Software {#green}──────────────────" 
+    },
+    {
+      "type":   "os",
+      "key":    "│  OS",
+      "format": "{name} {arch}"
+    },
+    {
+      "type":   "kernel",
+      "key":    "│  Kernel",
+      "format": "{sysname} {release}"
+    },
+    {
+      "type":   "disk",
+      "key":    "│  Filesystem",
+      "format": "{filesystem}"
+    },
+    {
+      "type":   "shell",
+      "key":    "│  Shell",
+      "format": "{pretty-name} {version}"
+    },
+    {
+      "type":   "de",
+      "key":    "│ 󰧨 DE",
+      "format": "{pretty-name} {version}"
+    },
+    {
+      "type":   "wm",
+      "key":    "│  WM",
+      "format": "{pretty-name} {version}"
+    },
+    {
+      "type": "title",
+      "format": "{#green}├────────────────── {#red}Hardware {#green}──────────────────"
+    },
+    {
+      "type":   "host",
+      "key":    "│ 󰚗 Host",
+      "format": "{name}"
+    },
+    {
+      "type":   "cpu",
+      "key":    "│  CPU",
+      "format": "{name} ({#green}{cores-physical}{#}) @ {freq-max}"
+    },
+    {
+      "type":   "gpu",
+      "key":    "│ 󰢮 GPU",
+      "format": "{name} [{#red}{type}{#}]"
+    },
+    {
+      "type":   "display",
+      "key":    "│ 󰍹 Display",
+      "format": "{name} {width}x{height} @ {refresh-rate}Hz [{#red}{type}{#}]"
+    },
+    {
+      "type":   "memory",
+      "key":    "│  Memory",
+      "format": "{used} / {total} ({percentage})"
+    },
+    {
+      "type":   "disk",
+      "key":    "│  Disk",
+      "format": "{size-used} / {size-total} ({size-percentage})"
+    },
+    {
+      "type":   "title",
+      "format": "{#green}╰──────────────────────────────────────────────"
+    }
+  ]
+}
