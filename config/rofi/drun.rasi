@@ -1,0 +1,32 @@
+@theme "theme"
+
+mainbox {
+	children: [
+		"inputbar",
+		"listview",
+		"message"
+	];
+}
+
+inputbar {
+    children: ["prompt", "entry"];
+    spacing: @object-spacing;
+	background-color: @background;
+}
+
+prompt {
+    text-color: @foreground;
+	background-color: @background;
+}
+
+entry {
+    placeholder: "Search Apps";
+    text-color: @foreground;
+	background-color: @background;
+}
+
+listview {
+	columns: 1;
+	lines: 7;
+}
+

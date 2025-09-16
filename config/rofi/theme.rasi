@@ -1,0 +1,98 @@
+* {
+    font: "JetBrains Mono 14";
+    background: #001d20;
+    foreground: #00d4ff;
+    border-radius: 8px;
+	window-padding: 12px;
+	window-border: 2px solid;
+    window-border-color: #00d4ff;
+	object-spacing: 10px;
+    object-margin: 0;
+    object-padding: 8px;
+	button-active: #00A7C8;
+}
+
+configuration {
+	modes: [
+		drun,
+		window
+	];
+
+	display-drun: "  ";
+}
+
+
+// window settings
+
+window {
+    transparency: "real";
+	blur: 15;
+    width: 45%;
+    border-radius: @border-radius;
+    background-color: @background;
+    border: @window-border;
+    border-color: @window-border-color;
+    padding: @window-padding;
+}
+
+mainbox {
+	background-color: @background;
+    spacing: @object-spacing;
+    margin: @object-margin;
+    padding: @object-padding;
+}
+
+listview {
+    fixed-height: true;
+    fixed-columns: true;
+    cycle: false;
+    scrollbar: false;
+    border: 0px solid;
+	background-color: @background;
+}
+
+element {
+	children: [
+		element-icon,
+		element-text
+	];
+	
+    spacing: @object-spacing;
+    margin: @object-margin;
+    padding: @object-padding;
+    border: 0px solid;
+    border-radius: @border-radius;
+    border-color: @background;
+    background-color: transparent;
+}
+
+element normal.normal {
+	background-color: transparent;
+}
+
+element alternate.normal {
+	background-color: transparent;
+}
+
+element selected.active {
+	background-color: @button-active;
+}
+
+element selected.normal {
+	background-color: @button-active;
+}
+
+element-icon {
+	size: 30;
+	background-color: transparent;
+}
+
+element-text {
+	background-color: transparent;
+}
+
+
+message {
+    background-color: red;
+    border: 0px solid;
+}
