@@ -25,7 +25,7 @@ window-title-font-family = JetBrains Mono
 #background-blur = true
 
 # gtk
-gtk-adwaita = true
+# gtk-adwaita = true
 
 # shell integration
 shell-integration = fish
