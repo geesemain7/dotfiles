@@ -1,4 +1,4 @@
-theme = "noctis"
+theme = "noctis-custom"
 
 [editor]
 auto-completion = true
