@@ -24,17 +24,17 @@
     },
     {
       "type":   "os",
-      "key":    "│  OS",
+      "key":    "│  OS",
       "format": "{name} {arch}"
     },
     {
       "type":   "kernel",
-      "key":    "│  Kernel",
+      "key":    "│ 󰌽 Kernel",
       "format": "{sysname} {release}"
     },
     {
       "type":   "disk",
-      "key":    "│  Filesystem",
+      "key":    "│  Filesystem",
       "format": "{filesystem}"
     },
     {
@@ -68,7 +68,7 @@
     },
     {
       "type":   "gpu",
-      "key":    "│ 󰢮 GPU",
+      "key":    "│ 󰾲 GPU",
       "format": "{name} [{#red}{type}{#}]"
     },
     {
