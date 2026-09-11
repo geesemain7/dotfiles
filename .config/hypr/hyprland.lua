@@ -12,6 +12,16 @@
 ------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
+-- Laptop display
+hl.monitor({
+    output   = "DP-1",
+    mode     = "2560x1600@239.94",
+    vrr      = 1,
+    position = "auto",
+    scale    = "1.33"
+})
+
+-- Odyssey G7
 hl.monitor({
     output   = "DP-6",
     mode     = "3480x2160@143.99",
@@ -33,20 +43,13 @@ hl.config({
 local terminal    = "kitty"
 local fileManager = "nautilus"
 local browser     = "firefox"
-local menu        = "hyprlauncher"
-
 
 -------------------
 ---- AUTOSTART ----
 -------------------
 
--- See https://wiki.hypr.land/Configuring/Basics/Autostart/
-
 hl.on("hyprland.start", function () 
---   hl.exec_cmd(terminal)
---   hl.exec_cmd("nm-applet")
   hl.exec_cmd("noctalia")
-  hl.exec_cmd("hyprpaper")
   hl.exec_cmd("hypr_steam_watcher")
 end)
 
@@ -55,7 +58,7 @@ end)
 ---- ENVIRONMENT VARIABLES ----
 -------------------------------
 
-hl.env("GDK_SCALE", "1.5")
+hl.env("GDK_SCALE", "1.33")
 hl.env("XCURSOR_SIZE", "24")
 hl.env("XCURSOR_THEME", "Bibata-Custom")
 hl.env("HYPRCURSOR_SIZE", "24")
@@ -70,20 +73,7 @@ hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
 ----- PERMISSIONS -----
 -----------------------
 
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Permissions/
--- Please note permission changes here require a Hyprland restart and are not applied on-the-fly
--- for security reasons
-
--- hl.config({
---   ecosystem = {
---     enforce_permissions = true,
---   },
--- })
-
--- hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
--- hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
--- hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
-
+-- empty for now lolo
 
 -----------------------
 ---- LOOK AND FEEL ----
@@ -131,10 +121,9 @@ hl.layer_rule({
 })
 
 -- Window-specific decoration
-hl.window_rule({
-    match = { class = "kitty" },
-    opacity = "0.85 override",
-})
+hl.window_rule({ match = { class = "io.bassi.Amberol" },   opacity = "0.8 override", })
+hl.window_rule({ match = { class = "kitty" },              opacity = "0.8 override", })
+hl.window_rule({ match = { class = "org.gnome.Nautilus" }, opacity = "0.8 override", })
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}    } })
@@ -173,8 +162,9 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 -- I don't want no mascot bro
 hl.config({
     misc = {
-        force_default_wallpaper = 1,
-        disable_hyprland_logo   = true,
+        disable_hyprland_logo        = true,
+        disable_splash_rendering     = true,
+        force_default_wallpaper      = 1,
     },
 })
 
@@ -196,17 +186,17 @@ hl.config({
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
         touchpad = {
-            natural_scroll = false,
+            natural_scroll = true,
         },
     },
 })
 
+-- Touchpad settings
 hl.gesture({
     fingers = 4,
     direction = "horizontal",
     action = "workspace"
 })
-
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -234,7 +224,6 @@ hl.bind("SHIFT + Print", hl.dsp.exec_cmd(ipc .. "screenshot-fullscreen"))
 
 -- Window Management
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
@@ -260,8 +249,9 @@ hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
--- hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                  { locked = true, repeating = true })
--- hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                  { locked = true, repeating = true })
+-- Move/resize windows with touchpad
+hl.bind(mainMod .. " + TAB", hl.dsp.window.drag(),  { mouse = true })
+hl.bind(mainMod .. " + ALT_L", hl.dsp.window.resize(), { mouse = true })
 
 -- Function row
 hl.bind("XF86AudioRaiseVolume",  hl.dsp.exec_cmd(ipc .. "volume-up"))
@@ -310,14 +300,9 @@ hl.window_rule({
 })
 
 -- Windows that I prefer floating
-hl.window_rule({
-    match = {
-        class = "io.bassi.Amberol",
-        class = "qbz",
-        class = "steam"
-    },
-    float = true,
-})
+hl.window_rule({ match = { class = "io.bassi.Amberol" }, float = true, })
+hl.window_rule({ match = { class = "qbz" },              float = true, })
+hl.window_rule({ match = { class = "steam" },            float = true, })
 
 hl.window_rule({
     match = { title = "Friends List" },
