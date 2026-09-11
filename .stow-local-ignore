@@ -1,0 +1,10 @@
+# git poo
+\.git
+\.gitignore
+\.gitmodules
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+^/config_archive*
