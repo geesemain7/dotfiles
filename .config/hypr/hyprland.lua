@@ -188,19 +188,26 @@ hl.config({
     input = {
         kb_layout  = "us",
 
-        follow_mouse = 2,
-        sensitivity = 0,
+        follow_mouse  = 2,
+        sensitivity   = 1,
         accel_profile = "flat",
 
         touchpad = {
             clickfinger_behavior = true,
             natural_scroll = true,
-            tap_to_click   = false,
+            scroll_factor = 0.3,
+            tap_to_click = false,
         },
     },
 })
 
--- Touchpad settings
+hl.device({
+    name = "asuf1209:00-2808:0219-touchpad",
+    accel_profile = "flat",
+    sensitivity = 0.9,
+})
+
+-- Gesture settings
 hl.gesture({
     fingers = 4,
     direction = "horizontal",

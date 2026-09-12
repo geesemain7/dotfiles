@@ -8,3 +8,4 @@
 ^/COPYING
 
 ^/config_archive*
+^/.config/kitty*
