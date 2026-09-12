@@ -188,25 +188,27 @@ hl.config({
     input = {
         kb_layout  = "us",
 
-        follow_mouse  = 2,
-        sensitivity   = 1,
+        follow_mouse = 2,
+        sensitivity = 1,
         accel_profile = "flat",
+        -- force_no_accel = true,
 
         touchpad = {
             clickfinger_behavior = true,
             natural_scroll = true,
-            scroll_factor = 0.3,
+            scroll_factor = 0.5,
             tap_to_click = false,
         },
     },
 })
 
+
 hl.device({
     name = "asuf1209:00-2808:0219-touchpad",
-    accel_profile = "flat",
-    sensitivity = 0.9,
+    accel_profile = "custom",
+    scroll_points = "0.2144477506 0.000 0.307 0.615 1.077 1.539 2.002 2.505 3.208 3.910 4.613 5.315 6.018 6.720 7.423 8.125 8.828 9.530 10.233 10.935 12.387",
+    sensitivity = 0.8,
 })
-
 -- Gesture settings
 hl.gesture({
     fingers = 4,
